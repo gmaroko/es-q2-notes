@@ -1,0 +1,37 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notes Manager</title>
+</head>
+<body>
+  <div class="container">
+    <div class="card" role="region" aria-labelledby="title">
+      <h1 id="title">Notes Manager</h1>
+
+      <!-- Form for adding notes -->
+      <form id="note-form" autocomplete="off" aria-label="Add a new note">
+        <label class="sr-only" for="note-input">Note</label>
+        <textarea id="note-input" name="note" placeholder="Type note…"></textarea>
+        <button class="primary" type="submit">Add</button>
+      </form>
+
+      <!-- Notes list region -->
+      <div id="list-region" aria-live="polite" aria-atomic="true">
+        <ul id="notes-list" class="notes"></ul>
+      </div>
+    </div>
+  </div>
+  <template id="note-template">
+    <li class="note" data-id="">
+      <div class="note__text"></div>
+      <div class="note__meta">
+        <time class="note__time" datetime=""></time>
+        <div class="note__actions">
+          <button class="btn-danger" data-action="delete" title </li>
+  </template>
+  <script src="./js/controller.js"></script>
+</body>
+</html>
